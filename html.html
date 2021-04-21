@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>calculadoradinamica</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var numero_inicial = prompt('informe o primeiro numero:');
+            var operacao = prompt('informe a operação Desejada:');
+
+            while(operacao != '-' && operacao != '+' && operacao != '/' && operacao != '*'){
+              alert('Por favor informe um sinal valido!');
+              var operacao = prompt('informe a operação Desejada:');
+            }
+
+            var numero_final = prompt('Informe o segundo numero para fazer a operação:')
+            //convertendo a strings para numero
+            numero_inicial = parseInt(numero_inicial);
+            numero_final = parseInt(numero_final);
+
+            var result = 0;
+
+            if(operacao == '+'){
+                result = numero_inicial + numero_final;
+            }else if(operacao == '-'){
+                result = numero_inicial - numero_final;
+            }else if(operacao == '*'){
+                result = numero_inicial * numero_final;
+            }else if(operacao == '/'){
+                result = numero_inicial / numero_final;
+            }
+            alert('Resultado da operação e => R$ '+result);
+        </script>
+    </body>
+</html>
